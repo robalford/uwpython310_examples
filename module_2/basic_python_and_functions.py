@@ -27,7 +27,7 @@ print(2 +2)  # printed expression
 
 statement_contains_expression = 2 + 2
 
-# Blocks of code - COPY THIS
+# Blocks of code
 
 learning_python = True
 
@@ -36,7 +36,7 @@ if learning_python:
     print("Remember white space is significant!")
     print("Use spaces not tabs please :)")
 
-# Expressions - COPY THESE
+# Expressions
 
 calculate_me = 120 / 4 * 3 + 2
 print(calculate_me)
@@ -59,7 +59,7 @@ print(convert_me)
 
 _symbol = 23
 symbol = 23
-# 23symbol = 23
+# 23symbol = 23  # this will break
 
 # Naming conventions
 
@@ -69,7 +69,7 @@ snake_case = "Use me for variable and function names"
 class UseCamelCaseForClasses:
     CONSTANT_VALUE = "Use ALL_CAPS for constants"
 
-# Assignment (next slide) - symbols don't have types, values do - dynamic typing
+# Assignment - symbols don't have types, values do - dynamic typing
 
 symbol = 23
 print(type(symbol))
@@ -93,7 +93,7 @@ value_1, value_2 = value_2, value_1
 print(value_1)
 print(value_2)
 
-# Value identity - NEXT SLIDE
+# Value identity
 
 symbol_1 = 1
 symbol_2 = 2
@@ -145,7 +145,7 @@ for item in shopping_list:
 for number in range(10):
     print(number)
 
-# change these values to show different paths
+# Change these Boolean values to show different paths through the conditional statements
 
 i_am_hungry = True
 i_am_thirsty = False
@@ -157,7 +157,7 @@ elif i_am_thirsty:
 else:
     print("Keep doing what you're doing")
 
-# Assert statement - writing tests
+# Assert statement - for writing tests
 
 def add(num1, num2):
     return num1 + num2
@@ -212,7 +212,7 @@ def call_divide_by_zero():
 def view_call_stack():
     call_divide_by_zero()
 
-# view_call_stack()
+# view_call_stack()  # uncomment to throw the error and view call stack
 
 # Function parameters and arguments
 
