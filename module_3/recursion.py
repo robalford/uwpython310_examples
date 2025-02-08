@@ -47,3 +47,23 @@ def factorial(number):
         return factorial_value
 
 # print(factorial(5))
+
+# Fibonnaci
+
+def fibonacci(n):
+    """ compute the nth Fibonacci number """
+
+    if n < 0:  # check for negative number -- just in case.
+        return None
+    elif n == 0:
+        return 0
+    if n == 1:
+        return 1
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
+
+# nth values with zero-based index:
+# 0 1 2 3 4 5 6 7
+# 0 1 1 2 3 5 8 13
+
+fibonacci(0)
