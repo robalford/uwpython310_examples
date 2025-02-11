@@ -20,14 +20,21 @@ print(a_list[-1])
 
 string_slice = a_string[5:13]
 list_slice = a_list[2:4]
+print(string_slice)
+print(list_slice)
 
 slice_from_beginning = a_list[:4]
 slice_from_the_end = a_string[-10:]
+print(slice_from_beginning)
+print(slice_from_the_end)
 
 every_other_word = a_list[:4:2]
 reverse_list = a_list[::-1]
+print(every_other_word)
+print(reverse_list)
 
 copy_of_a_list = a_list[:]
+print(copy_of_a_list)
 
 # Zero indexing and slices
 
@@ -65,7 +72,9 @@ one_more_tuple = (1, )
 not_a_tuple = (1)
 
 tuple_from_string = tuple("Make me a tuple")
+print(tuple_from_string)
 tuple_from_iterable = tuple(list_of_numbers)
+print(tuple_from_iterable)
 
 list_of_numbers[1] = 5
 print(list_of_numbers)
@@ -133,7 +142,7 @@ print(new_shopping_list)
 
 shopping_list = ["Milk", "Peanut Butter", ["Lettuce", "Bread", "Bananas"]]
 
-copy_of_list = shopping_list[:]
+copy_of_list = shopping_list[:]  # shallow copy
 print(copy_of_list)
 copy_of_list[2].pop()
 print(copy_of_list)

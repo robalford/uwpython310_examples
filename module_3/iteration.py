@@ -15,8 +15,8 @@ for character in "A string":
 
 # If you need an index, use enumerate builtin
 
-for index, character in "A string":
-    print(index, character, end=" ")
+for index, character in enumerate("A string"):
+    print(index, character)
 
 # Use range to do something a certain number of time, indicate with _ convention if you don't use the number
 

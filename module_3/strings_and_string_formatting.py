@@ -3,7 +3,7 @@
 # Create string literal with single, double or triple quotes
 
 string1 = 'I am a string'
-string2 = 'So am I'
+string2 = "So am I"
 string3 = """I am
 a multi-line
 string"""
@@ -19,7 +19,7 @@ print(type(str(23)))
 
 # Splitting and joining strings
 
-comma_separated_values ="1,2,3,4"
+comma_separated_values = "1,2,3,4"
 
 list_from_comma_separated_values = comma_separated_values.split(",")
 print(list_from_comma_separated_values)
