@@ -1,0 +1,4 @@
+I am a file
+with some
+lines of text
+in it
