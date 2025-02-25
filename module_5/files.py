@@ -6,6 +6,7 @@ with open("my_file.txt", "r") as f:
 print(f"File closed: {f.closed}\n")
 print(f"File contents:\n{read_data}\n")
 
+# Read a file in chunks
 with open("my_file.txt", "r") as f:
     first_line = f.read(11)
     rest_of_file = f.read()
@@ -20,15 +21,15 @@ with open("my_file.txt", "r") as f:
         print(line.upper(), end='')
 
 with open("my_file.txt", "w") as f:
-    print("Write mode overwrites the file:")
     f.write("Add something new\n")
 
 with open("my_file.txt", "r") as f:
+    print("\nWrite mode overwrites the file:")
     print(f.read())
 
 with open("my_file.txt", "a") as f:
-    print("Append mode writes to the end of the file:")
     f.write("Add this to the file")
 
 with open("my_file.txt", "r") as f:
-   print(f.read())
+    print("Append mode writes to the end of the file:")
+    print(f.read())

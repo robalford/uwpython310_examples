@@ -92,7 +92,7 @@ def update_shopping_list():
         "3": remove_item,
     }
     update_selection = input(">>> ")
-    update_option = update_options.get(update_selection, None)
+    update_option = update_options.get(update_selection)
     if update_option is None:
         print("Invalid selection")
     else:
