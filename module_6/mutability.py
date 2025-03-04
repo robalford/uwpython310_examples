@@ -40,9 +40,9 @@ list_of_lists_copy[1].append(7)
 # print(list_of_lists_copy[1] is list_of_lists[1])
 
 # When Python makes a copy of a container, it makes a 'shallow copy' by default. That means it creates
-# a new container object that includes references to all the same objects as the original container. Usually
-# this is fine and takes the least amount of work. But can lead to bugs when the containers contain mutable
-# objects.
+# a new container object that includes references to all the same objects as the original container. Often
+# this is fine and takes the least amount of work for Python to copy the object. But can lead to bugs when
+# the containers contain mutable objects.
 
 # If you need to make a new copy of all the objects in the container, you can use the copy.deepcopy() function
 # from the Python Standard Library
@@ -90,5 +90,5 @@ def add_numbers_to_list(list_of_nums=None):
 
 # Now you get the expected behavior where the function uses a new empty list each time it's called
 
-print(add_numbers_to_list())
-print(add_numbers_to_list())
+# print(add_numbers_to_list())
+# print(add_numbers_to_list())

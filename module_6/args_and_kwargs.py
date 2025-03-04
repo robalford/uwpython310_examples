@@ -133,4 +133,4 @@ def keyword_only_args(arg1, arg2, *, kwarg1="default1", kwarg2="default2"):
 
 # But this will - and will use the default if not provided
 
-keyword_only_args(1, 2, kwarg1="override default1")
+# keyword_only_args(1, 2, kwarg1="override default1")

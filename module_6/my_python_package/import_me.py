@@ -1,6 +1,6 @@
 # Import this file in a Python interpreter to access variables and functions in the import_me namespace
 
-# Or you can import specific names with from import_me import a_function
+# Or you can import specific names with from my_python_package.import_me import a_function
 
 # See all the modules available in the current namespace with sys.modules
 

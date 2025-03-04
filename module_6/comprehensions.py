@@ -86,7 +86,7 @@ for number in one_through_ten:
 
 # print(one_through_five)
 
-# But with a comprehension, you can include mapping and filtering in a single concise statement
+# But with a comprehension, you can include mapping and filtering in a single concise statement using if statement
 
 one_through_five_times_five = [number * 5 for number in one_through_ten if number <= 5]
 

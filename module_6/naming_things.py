@@ -37,8 +37,8 @@ grocery_item = grocery_item.title()
 int_age = 43
 print("Age: " + str(int_age))  # int_age is now a string
 
-# Function names should clearly describe the action they perform
 
+# Function names should clearly describe the action they perform - helps to focus on functions that do just one thing
 
 def add_grocery_item(new_grocery_item):
     shopping_list.append(new_grocery_item)
