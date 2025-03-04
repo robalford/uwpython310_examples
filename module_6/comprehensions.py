@@ -2,7 +2,7 @@
 # operations on all items in a sequence in order to create a new sequence
 
 # These are similar to concepts like map() and filter() functions in functional programming languages
-# (and Python provides built-in map() and filter() functions as well)
+# (and Python provides built-in map() and filter() functions as well that pre-date comprehensions)
 
 # Python is an object-oriented programming language that supports some functional programming language
 # features to use where they make sense (like a lot of things in Python)
