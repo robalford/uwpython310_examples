@@ -2,6 +2,8 @@ from textwrap import dedent
 import sys
 
 
+# Define the GroceryItem class
+
 class GroceryItem:
     def __init__(self, name, category, price=None):
         self.name = name
@@ -10,9 +12,21 @@ class GroceryItem:
         self.checked_off = False
 
     def display_grocery_item(self):
-        return (f"[{'x' if self.checked_off else ' '}] "
-                f"{self.name.title()} {self.price:.2f}")
+        return f"[{'x' if self.checked_off else ' '}] {self.name.title()} {self.price:.2f}"
 
+
+# Instantiate GroceryItem instance objects
+
+milk = GroceryItem("milk", "dairy", 5.00)
+lettuce = GroceryItem("lettuce", "produce", 2.00)
+chicken = GroceryItem("chicken", "meat", 10.00)
+cheese = GroceryItem("cheese", "dairy", 7.00)
+hotdogs = GroceryItem("hot dogs", "meat", 6.00)
+apples = GroceryItem("apples", "produce", 4.00)
+yogurt = GroceryItem("yogurt", "dairy", 6.00)
+
+
+# Define the ShoppingList class
 
 class ShoppingList:
     def __init__(self, name):
@@ -37,16 +51,7 @@ class ShoppingList:
         return sum([grocery_item.price for grocery_item in self.grocery_items.values()])
 
 
-# Create a shopping list
-
-milk = GroceryItem("milk", "dairy", 5.00)
-lettuce = GroceryItem("lettuce", "produce", 2.00)
-chicken = GroceryItem("chicken", "meat", 10.00)
-cheese = GroceryItem("cheese", "dairy", 7.00)
-hotdogs = GroceryItem("hot dogs", "meat", 6.00)
-apples = GroceryItem("apples", "produce", 4.00)
-yogurt = GroceryItem("yogurt", "dairy", 6.00)
-
+# Create a ShoppingList instance and add GroceryItem objects
 
 shopping_list = ShoppingList("QFC")
 shopping_list.add_grocery_item(milk)
@@ -56,8 +61,6 @@ shopping_list.add_grocery_item(cheese)
 shopping_list.add_grocery_item(hotdogs)
 shopping_list.add_grocery_item(apples)
 shopping_list.add_grocery_item(yogurt)
-
-shopping_list.print_shopping_list()
 
 
 # User Interaction Code - these work best as module-level functions
