@@ -8,6 +8,8 @@ class Book:
         self.pages_read = 0  # You can set initial attribute values for all instances
         self.finished_book = False
 
+    # Custom methods
+
     def read_to_page(self, page_number):
         self.pages_read = page_number  # Methods can update instance attribute values
         print(f"Read to page {page_number} of {self.title} by {self.author}")
@@ -31,17 +33,16 @@ moby_dick = Book("Moby Dick", "Herman Melville", 635)
 # print(f"Pages read: {moby_dick.pages_read}")
 
 
-# When you call methods, the object instance gets automatically passed in as the first argument.
+# When you call methods, the object instance gets automatically passed in as the first argument. Methods can return
+# new values or objects.
 
 # moby_dick.read_to_page(100)
-
-# Methods can return new values or objects.
-
+# print(moby_dick.pages_read)
 # print(f"You have {moby_dick.pages_left_to_read()} pages left to read.")
 
 # You can also update instance attribute values directly with assignment.
 
-moby_dick.pages_read = 200
+# moby_dick.pages_read = 200
 # print(f"Pages read: {moby_dick.pages_read}")
 # print(f"You have {moby_dick.pages_left_to_read()} pages left to read.")
 

@@ -2,10 +2,10 @@
 
 # There are many built-in types.
 
-print(type("I'm a string"))
-print(type(25))
-print(type(False))
-print(type([]))
+# print(type("I'm a string"))
+# print(type(25))
+# print(type(False))
+# print(type([]))
 
 
 # A class statement creates a new custom type.
@@ -33,10 +33,11 @@ class MyClass:
 # We've been using these custom methods for built-in types like lists and strings. Methods are just functions that
 # belong to an object and are called from the object's namespace using dot notation and parentheses.
 
-# print("lower case".upper())
+some_words = "some words"
+# print(some_words.upper())
 
 
-# When you define a class in Python, you create a new custom type object with its own attributes and methods that you
+# When you define a class in Python, you create a new custom type with its own attributes and methods that you
 # can access and use in the same way as the built-in types.
 
 class CustomType:

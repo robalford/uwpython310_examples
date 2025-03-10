@@ -5,13 +5,14 @@ import sys
 # Define the GroceryItem class
 
 class GroceryItem:
-    def __init__(self, name, category, price=None):
+    def __init__(self, name, category, price):
         self.name = name
         self.category = category
         self.price = price
         self.checked_off = False
 
     def display_grocery_item(self):
+        """Print a shopping list item indicating whether the item is checked off."""
         return f"[{'x' if self.checked_off else ' '}] {self.name.title()} {self.price:.2f}"
 
 
@@ -34,9 +35,11 @@ class ShoppingList:
         self.grocery_items = {}
 
     def add_grocery_item(self, grocery_item):
+        """Add a GroceryItem object to grocery_items dict, using the item name as a key for quick lookups."""
         self.grocery_items[grocery_item.name] = grocery_item
 
     def print_shopping_list(self):
+        """Print a shopping list sorted by categories."""
         items_sorted_by_category = sorted(self.grocery_items.values(), key=lambda item: item.category)
         current_category = items_sorted_by_category[0].category
         print(current_category.title())
@@ -45,9 +48,10 @@ class ShoppingList:
                 current_category = grocery_item.category
                 print(grocery_item.category.title())
             print(grocery_item.display_grocery_item())
-        print(f"Total cost of groceries: {self.calculate_total_cost()}")
+        print(f"Total cost of groceries: {self.calculate_total_cost():.2f}")
 
     def calculate_total_cost(self):
+        """Calculate the total cost of groceries in the shopping list."""
         return sum([grocery_item.price for grocery_item in self.grocery_items.values()])
 
 
