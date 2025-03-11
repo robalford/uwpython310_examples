@@ -1,4 +1,5 @@
-# A class is a category of objects with shared characteristics and behavior.
+# A class is a category of objects with shared characteristics and behavior. They can be used to model real world things
+# and situations.
 
 class Book:
     # In Python a class's __init__() method is used to define instance attributes and instantiate new objects.

@@ -109,8 +109,10 @@ def add_item():
 
 def check_off_item():
     item_to_check_off = input("Enter item to check off: \n>>> ").strip().lower()
-    if item_to_check_off not in shopping_list.grocery_items:
-        print("That item is not in your shopping list.")
+    while item_to_check_off not in shopping_list.grocery_items:
+        item_to_check_off = input(
+            "That item is not in your shopping list. Enter an item to check off: \n>>> "
+        ).strip().lower()
     else:
         shopping_list.grocery_items[item_to_check_off].checked_off = True
         print(f"Checked off {item_to_check_off}.")
@@ -118,8 +120,10 @@ def check_off_item():
 
 def remove_item():
     item_to_remove = input("Enter item to remove from list: \n>>> ").strip().lower()
-    if item_to_remove not in shopping_list.grocery_items:
-        print("That item is not in your shopping list.")
+    while item_to_remove not in shopping_list.grocery_items:
+        item_to_remove = input(
+            "That item is not in your shopping list. Enter an item to remove: \n>>> "
+        ).strip().lower()
     else:
         del shopping_list.grocery_items[item_to_remove]
         print(f"Removed {item_to_remove} from shopping list.")

@@ -2,10 +2,10 @@
 
 # There are many built-in types.
 
-# print(type("I'm a string"))
-# print(type(25))
-# print(type(False))
-# print(type([]))
+print(type("I'm a string"))
+print(type(25))
+print(type(False))
+print(type([]))
 
 
 # A class statement creates a new custom type.
