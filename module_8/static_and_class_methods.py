@@ -17,7 +17,8 @@ instance = MyClass()
 # with instance attribute data.
 
 # Class methods are methods that take the class object as an argument rather than an instance object. This can be useful
-# for providing alternate initializer methods in your classes
+# for providing alternate initializer methods in your classes. Like in the 'factory pattern' below where classes can
+# create their own instances with predefined attribute data.
 
 
 class Sandwich:
@@ -43,7 +44,11 @@ class Sandwich:
             print(f"- {ingredient}")
 
 
+# custom_sandwich = Sandwich("Kimchi Grilled Cheese", ["Sourdough", "Cheddar", "Kimchi", "Mayonnaise"])
+# custom_sandwich.print_sandwich()
+
 # reuben = Sandwich.reuben()
 # reuben.print_sandwich()
+#
 # blt = Sandwich.blt()
 # blt.print_sandwich()

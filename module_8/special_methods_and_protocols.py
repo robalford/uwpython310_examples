@@ -40,6 +40,10 @@ birds = [Duck(), Goose(), Hawk()]
 # You don't have to implement all the methods for a specific protocol, you can just implement the ones you
 # need for your classes.
 
+
+# Example of using magic methods to implement a Square class that can be used with mathematical and comparison
+# operators
+
 @total_ordering
 class Square:
     def __init__(self, side):
@@ -54,11 +58,11 @@ class Square:
         return f"Area of square: {self.area}"
 
     # Implement the __repr__() method to provide an 'official' string representation of the object - used with repr()
-    # and in the Python console
+    # and in the Python console. Representation in the context of your program for error messages etc.
     def __repr__(self):
         return f"Square({self.side})"
 
-    # Implement the __add__() method to create a new square object by adding two square objects with the + operator
+    # Implement the __add__() method to create a new square object by adding two square objects with the + operator.
     def __add__(self, other):
         return Square(self.side + other.side)
 
@@ -98,10 +102,13 @@ square3 = square1 + square2
 # implement __lt__()
 
 squares = [square3, square1, square2]
+
+# print(squares)
 # print(sorted(squares))  # uses our __repr__() to represent the objects in the console output
+# print(sorted(squares, reverse=True))
 
 
-# You can use the __call__() method to create callable instances that can be called like functions
+# You can use the __call__() method to create object instances that can be called like functions
 
 # Example below adapted from:
 # https://realpython.com/python-callable-instances/#creating-callable-instances-with-__call__-in-python
