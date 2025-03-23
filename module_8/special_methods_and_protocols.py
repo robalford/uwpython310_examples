@@ -103,9 +103,9 @@ square3 = square1 + square2
 
 squares = [square3, square1, square2]
 
-# print(squares)
-# print(sorted(squares))  # uses our __repr__() to represent the objects in the console output
-# print(sorted(squares, reverse=True))
+print(squares)
+print(sorted(squares))  # uses our __repr__() to represent the objects in the console output
+print(sorted(squares, reverse=True))
 
 
 # You can use the __call__() method to create object instances that can be called like functions
@@ -122,9 +122,9 @@ class PowerFactory:
 
 
 square_of = PowerFactory(2)
-# print(square_of(3))
-# print(square_of(6))
+print(square_of(3))
+print(square_of(6))
 
 cube_of = PowerFactory(3)
-# print(cube_of(3))
-# print(cube_of(5))
+print(cube_of(3))
+print(cube_of(5))

@@ -19,7 +19,7 @@ instance.my_attribute = "Hi there"
 # print(instance.my_attribute)
 
 
-# Many Object-oriented programming languages enforce the use of private attributes
+# Many Object-oriented programming languages encourage (and enforce) the use of private attributes
 # that can only be accessed and set through getter and setter methods.
 
 class MyClass:
@@ -150,4 +150,4 @@ my_numbers = Numbers([0, 5, 10])
 
 # Properties let you access calculated values just like other attribute values. This is more concise and readable than
 # using a calculate_average() method.
-# print(my_numbers.average)
+print(my_numbers.average)

@@ -44,11 +44,11 @@ class Sandwich:
             print(f"- {ingredient}")
 
 
-# custom_sandwich = Sandwich("Kimchi Grilled Cheese", ["Sourdough", "Cheddar", "Kimchi", "Mayonnaise"])
-# custom_sandwich.print_sandwich()
+custom_sandwich = Sandwich("Kimchi Grilled Cheese", ["Sourdough", "Cheddar", "Kimchi", "Mayonnaise"])
+custom_sandwich.print_sandwich()
 
-# reuben = Sandwich.reuben()
-# reuben.print_sandwich()
-#
-# blt = Sandwich.blt()
-# blt.print_sandwich()
+reuben = Sandwich.reuben()
+reuben.print_sandwich()
+
+blt = Sandwich.blt()
+blt.print_sandwich()
