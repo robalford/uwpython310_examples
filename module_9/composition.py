@@ -1,6 +1,6 @@
 from textwrap import dedent
 
-# Composition
+# Object Composition in Python
 
 # Let's explore the difference between inheritance and composition in OOP by continuing work on our
 # invoicing system for Indie Software Development, LLC

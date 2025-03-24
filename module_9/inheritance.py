@@ -1,4 +1,4 @@
-# Inheritance
+# Object Inheritance in Python
 
 # Let's build an invoicing system for a freelance software development company to
 # learn about inheritance, composition and other Object-oriented programming concepts
