@@ -22,7 +22,7 @@ class Contract:
                 f"Completed on: {self.delivery_date}")
 
 
-# All contracts have a client and delivery date, so we set those as attributes in our
+# All contracts have a unique client and delivery date, so we set those as instance attributes in our
 # base class's __init__() method and then use inheritance to pass those attributes
 # down to multiple subclasses
 
@@ -71,10 +71,11 @@ contract1 = HourlyContract("Acme Design Studios", "2/27/25",
 contract2 = FixedBidContract("E-commerce Extravaganza", "3/15/25",
                              2500)
 
-print("\n")
-print(contract1)
-print(contract1.display_invoice_amount())
-print("\n")
-print(contract2)
-print(contract2.display_invoice_amount())
-print("\n")
+if __name__ == "__main__":
+    print("\n")
+    print(contract1)
+    print(contract1.display_invoice_amount())
+    print("\n")
+    print(contract2)
+    print(contract2.display_invoice_amount())
+    print("\n")

@@ -16,30 +16,35 @@
 # https://stackoverflow.com/questions/3277367/how-does-pythons-super-work-with-multiple-inheritance
 
 class First:
-    def __init__(self):
+    def __init__(self, called_by):
         print("first")
+        print(f"Called by: {called_by}")
 
 
 class Second(First):
-    def __init__(self):
+    def __init__(self, called_by):
+        super().__init__("second")
         print("second")
+        print(f"Called by: {called_by}")
 
 
 class Third(First):
-    def __init__(self):
+    def __init__(self, called_by):
+        super().__init__("third")
         print("third")
+        print(f"Called by: {called_by}")
 
 
 class Fourth(Second, Third):
     def __init__(self):
-        super().__init__()
+        super().__init__("forth")
         print("that's it")
 
 # In this example, the MRO would be [Fourth, Second, Third, First].
 
 
 # Here's the output of instantiating Fourth. And you can change it by adding super().__init__() calls to the
-# other classes and Python will look left to right and then up to superclasses for methods to call. You can
-# see how this gets complicated quickly. So use multiple inheritance sparingly.
+# other classes and Python will look left to right and then up to superclasses for methods to call. Then it will look
+# in their super classes. You can see how this gets complicated quickly. So use multiple inheritance sparingly.
 
 f = Fourth()

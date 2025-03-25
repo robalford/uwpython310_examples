@@ -5,12 +5,10 @@ from textwrap import dedent
 # Let's explore the difference between inheritance and composition in OOP by continuing work on our
 # invoicing system for Indie Software Development, LLC
 
-# We'll start by defining a new Invoice class for generating invoices to send to clients for payment. But to create
-# an invoice, and send it in the mail we also need to keep track of our clients' addresses.
-
-# In the previous version of our program the client was included as a string field on the Contract class. So we could
-# list out address fields there, but this would tightly couple the client and contract data in our program and lead
-# to duplication if we had multiple contracts for the same client.
+# In the previous version of our program the client was included as a string attribute on the Contract class.
+# But now we want a way to keep track of client's addresses for our invoicing system. We could list out address
+# fields on the Contract class, but this would tightly couple the client and contract data in our program and
+# lead to duplication if we had multiple contracts for the same client.
 
 # Instead, let's create a new Client class that can contain the client's name, address and any other data that we
 # want to track. This is a better way of encapsulating related data and behavior in a single class.
@@ -93,26 +91,27 @@ class Invoice:
         )
 
 
-# Now to test our invoicing system, let's instantiate a couple new Client objects
+if __name__ == "__main__":
+    # Now to test our invoicing system, let's instantiate a couple new Client objects
 
-client1 = Client("Acme Design Studios", "123 Brooklyn Street Seattle WA 98105")
-client2 = Client("E-commerce Extravaganza", "999 Meridian Ave Shoreline WA 98133")
+    client1 = Client("Acme Design Studios", "123 Brooklyn Street Seattle WA 98105")
+    client2 = Client("E-commerce Extravaganza", "999 Meridian Ave Shoreline WA 98133")
 
-# And we'll create a few Contract objects for these clients
+    # And we'll create a few Contract objects for these clients
 
-contract1 = HourlyContract(client1, "2/27/25", 50, 80)
-contract2 = FixedBidContract(client2, "3/15/25", 2500)
-contract3 = FixedBidContract(client1, "3/22/25", 500)
+    contract1 = HourlyContract(client1, "2/27/25", 50, 80)
+    contract2 = FixedBidContract(client2, "3/15/25", 2500)
+    contract3 = FixedBidContract(client1, "3/22/25", 500)
 
-# Then we can generate invoices for each of these contracts with our Invoice objects with different Contract types
+    # Then we can generate invoices for each of these contracts with our Invoice objects with different Contract types
 
-invoice1 = Invoice("12345", contract1)
-invoice2 = Invoice("12346", contract2)
-invoice3 = Invoice("12347", contract3)
+    invoice1 = Invoice("12345", contract1)
+    invoice2 = Invoice("12346", contract2)
+    invoice3 = Invoice("12347", contract3)
 
-invoice1.generate_invoice()
-print("\n")
-invoice2.generate_invoice()
-print("\n")
-invoice3.generate_invoice()
-print("\n")
+    invoice1.generate_invoice()
+    print("\n")
+    invoice2.generate_invoice()
+    print("\n")
+    invoice3.generate_invoice()
+    print("\n")
